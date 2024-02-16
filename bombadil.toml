@@ -1,0 +1,9 @@
+# {dotfiles}/bombadil.toml
+
+dotfiles_dir = "dotfiles"
+
+[settings.dots]
+
+i3 = { source = "i3", target = ".config/i3" }
+
+polybar = { source = "polybar", target = ".config/polybar" }
