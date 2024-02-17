@@ -1,4 +1,4 @@
-# This is my personal repo for my configuration
+# This is my personal config backup repo
 
 I'm currently running an arch based distro (not manjaro) with the i3wm, and polybar. This is where I'm gonna store my stuff
 
@@ -8,6 +8,7 @@ I'm using [Toml Bombadil](https://github.com/oknozor/toml-bombadilhttps://github
 - **WM :** Config files for various components of my window manager (currently i3)
     - **i3 :** the basig config file for i3, I haven't touched it that much but I plan to change some things like starting certain apps in a specific workspace or in the scratchpad.
     - **polybar-themes :** I'm keeping the Hack theme as is for now as I like the aesthetics, but I'll probably tweak a thing or two and add custom modules.
+    - **other random stuff**
 - **bash config :** Nothing too fancy, just some custom ls commands and a colorisation of my prompt
 - **conf :** The kinda stuff you find under ~/.config/, for various softs that I use regularly (or are a pain the \*ss to configure)
 - **scripts :** Shell scripts, nothing more to say
