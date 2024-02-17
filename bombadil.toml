@@ -4,6 +4,13 @@ dotfiles_dir = "dotfiles"
 
 [settings.dots]
 
+# i3wm config
+
 i3 = { source = "i3", target = ".config/i3" }
 
+#polybar and polybar-themes stuff
+
 polybar = { source = "polybar", target = ".config/polybar" }
+polybarscripts = { source = "polybar-scripts", target = "polybar-scripts" }
+
+
