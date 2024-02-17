@@ -12,5 +12,8 @@ i3 = { source = "i3", target = ".config/i3" }
 
 polybar = { source = "polybar", target = ".config/polybar" }
 
+# bash config
 
+bashrc = { source = "bashconfig/.bashrc", target = ".bashrc" }
+bash_profile = { source = "bashconfig/.bash_profile", target = ".bash_profile"}
 

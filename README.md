@@ -8,7 +8,6 @@ I'm using Toml Bombadil to sync everything up and now that I understand a bit be
 
 - **i3 :** the basig config file for i3, I haven't touched it that much but I plan to change some things like starting certain apps in a specific workspace or in the scratchpad.
 - **polybar-themes :** I'm keeping the Hack theme as is for now as I like the aesthetics, but I'll probably tweak a thing or two and add custom modules.
-- **polybar-scripts :** Dependancy of custom modules for polybar. *I need to change its location so it's a bit cleaner than having it sitting in my home dir.*
 
 ## Notes
 
