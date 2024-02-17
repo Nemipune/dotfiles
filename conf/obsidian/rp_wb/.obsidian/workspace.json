@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "2e6a8622507f3153",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c17c4323c22f95d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0cfc91cdefb83ddf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RP - Root/Session 4.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a421c048e2436155",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ressources/Fate/Compétences.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "04776a0570208779",
+    "type": "split",
+    "children": [
+      {
+        "id": "1907de0ac4730fb2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "166a53744ebfcf4b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "68ec880ad21f13e2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "12fb9626c20c185f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "288869222eea16f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "afdbb0b58c810079",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "364634b1fdeaff09",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Ressources/Fate/Compétences.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "f285aadcc0355438",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Ressources/Fate/Compétences.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f0a0850f9876b490",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "990d31c1a8575b26",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Ressources/Fate/Compétences.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false
+    }
+  },
+  "active": "a421c048e2436155",
+  "lastOpenFiles": [
+    "Ressources/Fate/1 - Système de Jeu.md",
+    "RP - Ipoya/_Campagne/Personnages/Joueurs/Freya - Kharka.md",
+    "RP - Ipoya/_Campagne/Personnages/Joueurs/Célie - Quaelus.md",
+    "RP - Ipoya/_Campagne/Personnages/Joueurs/Nora - Iphy.md",
+    "RP - Ipoya/_Campagne/Première Session/Première Session, déroulement.canvas",
+    "RP - Ipoya/_Campagne/Personnages/PNJ/Personnages.md",
+    "RP - Ipoya/_Campagne/Personnages/PNJ/Groupes.md",
+    "RP - Root/Session 3.md",
+    "RP - Root/Session 5.md",
+    "RP - Root/Session 4.md",
+    "RP - Root/Session 1.md",
+    "RP - Root/Session 2.md",
+    "RP - Root/Carte.canvas",
+    "RP - Ipoya/_Univers/Factions/L'Étoile du Sud.md",
+    "RP - Ipoya/_Campagne/Première Session/Déroulement.md",
+    "RP - Ipoya/_Univers/Factions/Conseil d'Ipoya.md",
+    "RP - Ipoya/_Campagne/1 Histoire/Idées.md",
+    "RP - Ipoya/_Campagne/0 Notes/S1 - Message.md",
+    "RP - Ipoya/_Campagne/0 Notes/Langue.md",
+    "Ressources/Fate/Aspects.md",
+    "Ressources/Fate/Compétences.md",
+    "Templates/Créatures.md",
+    "RP - Ipoya/_Univers/Géographie/Villes/Ipoya.md",
+    "RP - Ipoya/_Univers/Faune/Goronks.md",
+    "RP - Ipoya/_Univers/Faune/Mahrmis.md",
+    "RP - Ipoya/_Univers/Personnages/Miranda Prestor.md",
+    "RP - Ipoya/_Univers/Personnages/Chancelier Chigod.md",
+    "RP - Ipoya/_Univers/Personnages/Katorch.md",
+    "Ressources/z_attachments/flotte-marchande.jpg",
+    "Ressources/z_attachments/ipoya_region.jpg",
+    "RP - Ipoya/_Univers/Culture",
+    "Ressources/z_attachments/alais.jpg",
+    "Templates/Callouts",
+    "Ressources/z_attachments/carte_ipoya_final.jpg",
+    "Ressources/z_attachments/khiberique.jpg",
+    "Ressources/z_attachments/cf15Pj6.jpg",
+    "Untitled",
+    "Ressources/z_attachments/dwann.webp",
+    "Ressources/Fate",
+    "Ressources",
+    "Ressources/z_attachments/conseil ipoya.webp",
+    "RP - Ipoya/_Campagne/Personnages/PNJ",
+    "RP - Ipoya/_Campagne/Personnages/Joueurs",
+    "RP - Ipoya/_Campagne/1 Histoire",
+    "RP - Ipoya/_Campagne/0 Notes",
+    "Ressources/z_attachments/chancelier_chigod.jpg",
+    "RP - Ipoya/_Campagne/Personnages",
+    "Ressources/z_attachments/plaines_Telos.webp",
+    "Inserts/Untitled.canvas"
+  ]
+}

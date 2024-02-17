@@ -4,16 +4,26 @@ dotfiles_dir = "dotfiles"
 
 [settings.dots]
 
-# i3wm config
+# wm config
 
-i3 = { source = "i3", target = ".config/i3" }
+## i3
+i3 = { source = "wm/i3", target = ".config/i3" }
 
-#polybar and polybar-themes stuff
+## Polybar and polybar-themes stuff
+polybar = { source = "wm/polybar", target = ".config/polybar" }
 
-polybar = { source = "polybar", target = ".config/polybar" }
+## Rofi menu
+rofi = { source = "wm/rofi", target = ".config/rofi" }
 
-# bash config
-
+# Bash config and terminal based stuff
 bashrc = { source = "bashconfig/.bashrc", target = ".bashrc" }
 bash_profile = { source = "bashconfig/.bash_profile", target = ".bash_profile"}
+hyfetch = { source = "bashconfig/hyfetch.json", target = ".config/hyfetch.json"}
 
+# Random config files for various packages
+flameshot = { source = "conf/flameshot.conf", target = ".config/flameshot.conf"}
+easyeffects = { source = "conf/easyeffects", target = ".config/easyeffects"}
+guitarix = { source = "conf/guitarix", target = ".config/guitarix"}
+
+# Scripts, launch and custom stuff
+scripts = { source = "scripts", target = "scripts"}

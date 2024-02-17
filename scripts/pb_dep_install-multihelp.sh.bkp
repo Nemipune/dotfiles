@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#yay -Syu
+cat /home/nemipune/scripts/ressources/pb-themes-deps | grep -v "#" | sudo pacman -S --needed -
+cat /home/nemipune/scripts/ressources/pb-themes-deps-aur | grep -v "#" | yay -S --needed -
+# --noconfirm

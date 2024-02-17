@@ -1,0 +1,16 @@
+{
+  "promptDelete": false,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "attachmentFolderPath": "Ipoya RP/z_attachments",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showInlineTitle": true
+}
