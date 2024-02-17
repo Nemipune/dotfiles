@@ -36,9 +36,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id protonmail-bridge
 exec --no-startup-id easyeffects
 exec --no-startup-id kdeconnect-cli
+exec --no-startup-id nitrogen --restore
 
 # Run polybar
-exec --no-startup-id /home/.config/polybar/launch.sh
+exec --no-startup-id /home/.config/polybar/launch.sh --hack
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -162,8 +163,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# SystemCtl gestion
 bindsym $mod+Shift+Return exec systemctl poweroff
 bindsym $mod+Ctrl+Return exec systemctl reboot
+
+# Reload dotfiles with bombadil
+bindsym $mod+Shift+n exec bombadil link
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
