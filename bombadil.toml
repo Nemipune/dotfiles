@@ -28,6 +28,7 @@ flameshot = { source = "conf/flameshot.conf", target = ".config/flameshot.conf"}
 easyeffects = { source = "conf/easyeffects", target = ".config/easyeffects"}
 guitarix = { source = "conf/guitarix", target = ".config/guitarix"}
 obsidian-rp = { source = "conf/obsidian/rp_wb", target = "documents/obsidian/Roleplay_Worldbuilding/.obsidian"}
+qbittorrent = { source = "conf/qBittorrent", target = ".config/qBittorrent"}
 
 # Scripts, launch and custom stuff
 scripts = { source = "scripts", target = "scripts"}
