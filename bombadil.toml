@@ -32,3 +32,4 @@ qbittorrent = { source = "conf/qBittorrent", target = ".config/qBittorrent"}
 
 # Scripts, launch and custom stuff
 scripts = { source = "scripts", target = "scripts"}
+
