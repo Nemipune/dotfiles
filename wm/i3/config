@@ -39,7 +39,7 @@ exec --no-startup-id kdeconnect-cli
 exec --no-startup-id nitrogen --restore
 
 # Run polybar
-exec --no-startup-id ~/.config/polybar/launch.sh --hack
+exec --no-startup-id ~/.config/polybar/hack/launch.sh
 
 # Screengrab
 bindsym Shift+Print exec flameshot gui

@@ -11,6 +11,12 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
+	
+	polybar -q top -c "$DIR"/config.ini &
+	polybar -q bottom -c "$DIR"/config.ini &
+	
+	# Parse for multiple monitors
+
 	if type "xrandr"; then
 		for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
 			MONITOR=$m polybar --reload top &
