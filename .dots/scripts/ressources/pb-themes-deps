@@ -1,0 +1,18 @@
+# Dependencies
+polybar
+rofi
+python-pywal
+calc
+networkmanager-dmenu
+#
+# Fonts
+ttc-iosevka
+ttf-fantasque-sans-mono
+noto-fonts
+otf-droid-nerd
+ttf-terminus-nerd
+# 
+# Icon Fonts
+ttf-iosevka-nerd
+ttf-icomoon-feather
+nodejs-material-design-icons

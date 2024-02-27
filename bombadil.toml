@@ -1,0 +1,35 @@
+# {dotfiles}/bombadil.toml
+
+dotfiles_dir = "dotfiles"
+
+[settings.dots]
+
+# wm config
+
+## i3
+i3 = { source = "wm/i3", target = ".config/i3" }
+
+## Polybar and polybar-themes stuff
+polybar = { source = "wm/polybar", target = ".config/polybar" }
+
+## Rofi menu
+rofi = { source = "wm/rofi", target = ".config/rofi" }
+
+## Nitrogen (wallpaper manager)
+nitrogen = { source = "wm/nitrogen", target = ".config/nitrogen"}
+
+# Bash config and terminal based stuff
+bashrc = { source = "bashconfig/.bashrc", target = ".bashrc" }
+bash_profile = { source = "bashconfig/.bash_profile", target = ".bash_profile"}
+hyfetch = { source = "bashconfig/hyfetch.json", target = ".config/hyfetch.json"}
+
+# Random config files for various packages
+flameshot = { source = "conf/flameshot.conf", target = ".config/flameshot.conf"}
+easyeffects = { source = "conf/easyeffects", target = ".config/easyeffects"}
+guitarix = { source = "conf/guitarix", target = ".config/guitarix"}
+; obsidian-rp = { source = "conf/obsidian/rp_wb", target = "documents/obsidian/Roleplay_Worldbuilding/.obsidian"}
+qbittorrent = { source = "conf/qBittorrent", target = ".config/qBittorrent"}
+
+# Scripts, launch and custom stuff
+scripts = { source = "scripts", target = "scripts"}
+
