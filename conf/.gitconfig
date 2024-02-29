@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Artemis
+	email = nemipune@protonmail.com
+[credential]
+	helper = 
+	helper = /usr/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
