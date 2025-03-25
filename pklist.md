@@ -10,13 +10,14 @@
 **bar:** `waybar`
 **screencap:** `grim` `grimshot`
 **dmenu:** `wofi`
+**backlight:** `light`
 
 ## TERMINAL
 **term:** `kitty`
 **shell:** `nushell` *todo:config*
 **proc:** `btm`
 **editor:** `vim`
-**filemanager:** `fifm`
+**filemanager:** `fifm` *todo:config*
 
 ## AUDIO
 **server:** `pipewire`
@@ -24,7 +25,7 @@
     - `pw-volume`
 
 ## UTILS
-**dotfiles:** `chezmoi`
+i**dotfiles:** `chezmoi`
 **passwords:** `bitwarden`
 **browser:** `firefox`
 
