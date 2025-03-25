@@ -43,6 +43,12 @@ alias l='ls -lahA --ignore=.?*'   # show long listing but no hidden dotfiles exc
 alias ldir='ls -ld */' #Lists only directories, no files
 alias lf='ls --color=auto -lahp | grep -v /' #lists only files, no directories 
 
+#chezmoi stuff
+alias chezmoidir="cd .local/share/chezmoi/"
+
+export EDITOR=vim
+
+
 [[ "$(whoami)" = "root" ]] && return
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
