@@ -3,7 +3,7 @@
 /* Global */
 * {
   font-family: "FiraCode Nerd Font";
-  font-size: .9rem;
+  font-size: 1rem;
   border-radius: 1rem;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -45,11 +45,11 @@ window > box {
 }
 
 
-/* Workspaces */
+/* Workspaces
 #workspaces:hover {
   background-color: @green;
 }
-
+*/
 #workspaces button {
   padding-right: .4rem;
   padding-left: .4rem;
@@ -65,7 +65,7 @@ window > box {
 }
 
 #workspaces button:hover {
-  /* border: .2px solid transparent; */
+  border: .2px solid transparent;
   color: @rosewater;
 }
 

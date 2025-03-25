@@ -1,0 +1,6 @@
+show=drun
+width=40%
+height=55%
+prompt=What's up?
+allow_images=true
+image_size=15

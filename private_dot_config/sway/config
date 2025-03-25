@@ -4,11 +4,15 @@ xwayland enable
 
 font pango:FireCode Nerd Font Regular 4px
 
-default_border pixel 1
-gaps inner  0
-gaps outer  30
-smart_borders on
-# smart_gaps on
+default_border pixel 2
+gaps inner  5
+gaps outer  10
+smart_borders off
+corner_radius 10
+default_dim_inactive 0.2
+blur enable
+blur_radius 5
+blur_brightness 1.5
 
 # assign 		[app_id="librewolf"] 		    1
 # assign 		[app_id="org.pwmt.zathura"] 4
@@ -19,8 +23,18 @@ set $left  h
 set $down  j
 set $up    k
 set $right l
+set $1 ampersand
+set $2 eacute
+set $3 quotedbl
+set $4 apostrophe
+set $5 parenleft
+set $6 minus
+set $7 egrave
+set $8 underscore
+set $9 ccedilla
+set $0 agrave
 set $term kitty
-set $menu wofi --show drun -I -a
+set $menu wofi --show drun --style ~/.config/wofi/style.css
 set $browser flatpak run org.mozilla.firefox
 set $file-manager kitty fm
 
@@ -29,7 +43,7 @@ bindsym $mod+d exec $menu
 bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec kitty --class="termfloat"
+bindsym $mod+Shift+Return exec systemctl poweroff
 bindsym $mod+Shift+e exec bemoji
 
 bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
@@ -46,13 +60,17 @@ bindsym $mod+slash workspace back_and_forth
 bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
 
+# Pulse volume bindings, replaced by pw-volume
+# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+# bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec "pw-volume change +2.5%; pkill -RTMIN+8 waybar"
+bindsym XF86AudioLowerVolume exec "pw-volume change -2.5%; pkill -RTMIN+8 waybar"
+bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-# bindsym XF86MonBrightnessUp exec light -A 5
-# bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -73,7 +91,7 @@ exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
 exec swaycons
 exec fcitx5
-exec_always  --no-startup-id  swaybg -i ~/Downloads/mocha-noise4-wallhaven-5gwmd3_3840x2160.png
+exec_always  --no-startup-id  swaybg -i ~/.config/sway/darkest_hour.jpg
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
 exec_always  --no-startup-id  autotiling-rs &
@@ -92,12 +110,13 @@ seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors
 # }
 
 # target                 title     bg    text   indicator  border
-client.focused           $pink     $base $text  $rosewater $pink
+client.focused           $pink     $base $text  $rosewater $lavender
 client.focused_inactive  $mauve    $base $text  $rosewater $mauve
 client.unfocused         $mauve    $base $text  $rosewater $mauve
-client.urgent            $peach    $base $peach $overlay0  $peach
+client.urgent            $peach    $base $peach $overlay0  $red
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
+
 
 # PROTIP: You can also dynamically set dmenu's colors this way:
 bindsym $mod+v exec dmenu_run -nb "$rosewater" -nf "$base" -sb "$base" -sf "$rosewater"
@@ -119,12 +138,13 @@ exec swayidle -w \
            tap enabled
            natural_scroll enabled
            middle_emulation enabled
-       }
+	}
 
     input "type:keyboard" {           
-        xkb_layout us
-        xkb_options caps:escape
-    }
+        xkb_layout "fr"
+        xkb_options "caps:escape"
+	xkb_numlock on
+	}
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -161,38 +181,38 @@ floating_modifier $mod normal
 # Workspaces: #
 #-------------#
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym $mod+$1 workspace number 1
+    bindsym $mod+$2 workspace number 2
+    bindsym $mod+$3 workspace number 3
+    bindsym $mod+$4 workspace number 4
+    bindsym $mod+$5 workspace number 5
+    bindsym $mod+$6 workspace number 6
+    bindsym $mod+$7 workspace number 7
+    bindsym $mod+$8 workspace number 8
+    bindsym $mod+$9 workspace number 9
+    bindsym $mod+$0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+$1 move container to workspace number 1
+    bindsym $mod+Shift+$2 move container to workspace number 2
+    bindsym $mod+Shift+$3 move container to workspace number 3
+    bindsym $mod+Shift+$4 move container to workspace number 4
+    bindsym $mod+Shift+$5 move container to workspace number 5
+    bindsym $mod+Shift+$6 move container to workspace number 6
+    bindsym $mod+Shift+$7 move container to workspace number 7
+    bindsym $mod+Shift+$8 move container to workspace number 8
+    bindsym $mod+Shift+$9 move container to workspace number 9
+    bindsym $mod+Shift+$0 move container to workspace number 10
     # move focused container to workspace(follow)
-    bindsym $mod+Ctrl+1 move container to workspace 1,  workspace 1
-    bindsym $mod+Ctrl+2 move container to workspace 2,  workspace 2
-    bindsym $mod+Ctrl+3 move container to workspace 3,  workspace 3
-    bindsym $mod+Ctrl+4 move container to workspace 4,  workspace 4
-    bindsym $mod+Ctrl+5 move container to workspace 5,  workspace 5
-    bindsym $mod+Ctrl+6 move container to workspace 6,  workspace 6
-    bindsym $mod+Ctrl+7 move container to workspace 7,  workspace 7
-    bindsym $mod+Ctrl+8 move container to workspace 8,  workspace 8
-    bindsym $mod+Ctrl+9 move container to workspace 9,  workspace 9
-    bindsym $mod+Ctrl+0 move container to workspace 10, workspace 10
+    bindsym $mod+Ctrl+$1 move container to workspace 1,  workspace 1
+    bindsym $mod+Ctrl+$2 move container to workspace 2,  workspace 2
+    bindsym $mod+Ctrl+$3 move container to workspace 3,  workspace 3
+    bindsym $mod+Ctrl+$4 move container to workspace 4,  workspace 4
+    bindsym $mod+Ctrl+$5 move container to workspace 5,  workspace 5
+    bindsym $mod+Ctrl+$6 move container to workspace 6,  workspace 6
+    bindsym $mod+Ctrl+$7 move container to workspace 7,  workspace 7
+    bindsym $mod+Ctrl+$8 move container to workspace 8,  workspace 8
+    bindsym $mod+Ctrl+$9 move container to workspace 9,  workspace 9
+    bindsym $mod+Ctrl+$0 move container to workspace 10, workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #---------------#
@@ -206,7 +226,7 @@ floating_modifier $mod normal
 
     # Switch the current container between different layout styles
     # bindsym $mod+s layout stacking
-    # bindsym $mod+w layout tabbed
+    bindsym $mod+z layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
@@ -226,8 +246,8 @@ floating_modifier $mod normal
 # Scratchpad: #
 #-------------#
 ## hide | show window(minus is "-" and plus is "+".)
-bindsym $mod+minus move scratchpad
-bindsym $mod+equal scratchpad show
+bindsym $mod+equal move scratchpad
+bindsym $mod+plus scratchpad show
 
 #----------------------#
 # Resizing containers: #
