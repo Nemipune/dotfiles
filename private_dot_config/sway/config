@@ -11,7 +11,7 @@ smart_borders off
 corner_radius 10
 default_dim_inactive 0.2
 blur enable
-blur_radius 5
+blur_radius 1
 blur_brightness 1.5
 
 # assign 		[app_id="librewolf"] 		    1
@@ -35,7 +35,7 @@ set $9 ccedilla
 set $0 agrave
 set $term kitty
 set $menu wofi --show drun --style ~/.config/wofi/style.css
-set $browser flatpak run org.mozilla.firefox
+set $browser firefox 
 set $file-manager kitty fm
 
 bindsym $mod+x exec keepassxc

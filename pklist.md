@@ -16,6 +16,7 @@
 **shell:** `nushell` *todo:config*
 **proc:** `btm`
 **editor:** `vim`
+**filemanager:** `fifm`
 
 ## AUDIO
 **server:** `pipewire`
