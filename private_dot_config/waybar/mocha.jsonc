@@ -5,18 +5,18 @@
     "custom/scratchpad-indicator",
 //    "temperature",
     "network",
-    "pulseaudio",
+    "custom/pipewire",
     "idle_inhibitor",
     "mpd",
     "custom/cava-internal",
-    "sway/mode",
+    "sway/mode"
   ],
   "sway/mode": {
     "format": " {}"
   },
   "modules-center": [
     "custom/weather",
-    "clock",
+    "clock"
   ],
   "modules-right": [
     "backlight",
@@ -27,7 +27,7 @@
     "battery",
     "tray",
     // "custom/recording",
-    "custom/powermenu",
+    "custom/powermenu"
   ],
   "custom/launcher": {
     "format": "",
@@ -70,8 +70,8 @@
   },
   "backlight": {
     "device": "intel_backlight",
-    "on-scroll-up": "light -A 7",
-    "on-scroll-down": "light -U 7",
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5",
     "format": "{icon} {percent}%",
     "format-icons": [
       "󰃜",
@@ -85,17 +85,24 @@
     "format": " {used}",
     "path": "/home",
     "tooltip": true,
-    "tooltip-format": "{used}/{total} => {path} {percentage_used}%",
+    "tooltip-format": "{used}/{total} => {path} {percentage_used}%"
   },
 
 "custom/pipewire": {
-    "format": "{icon}",
+    "format": "{icon} {percentage}%",
     "return-type": "json",
     "signal": 8,
+    "on-scroll-up": "pw-volume change +5%",
+    "on-scroll-up": "pw-volume change -5%",
+    "on-click": "pwvucontrol",
     "interval": "once",
     "format-icons": {
         "mute": "",
-        "default": ["", "", ""],
+        "default": [
+	    "", 
+	    "", 
+	    ""
+	],
     },
     "exec": "pw-volume status"
 },
@@ -112,12 +119,13 @@
       ]
     },
     "states": { 
-      "warning": 100,
+      "warning": 100
     },
     "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "tooltip": false,
-  }, */
+    "tooltip": false
+  }, 
+*/
  
   "battery": {
     "interval": 10,
@@ -139,8 +147,9 @@
     ],
     "format-full": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
-    "tooltip": true,
+    "tooltip": true
   },
+
   "clock": {
     "on-click": "~/.config/waybar/to_latte.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
@@ -150,18 +159,21 @@
     "tooltip": true,
     "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
   },
+
   "memory": {
     "on-click": "kitty btm",
     "interval": 1,
     "format": " {percentage}%",
     "states": {
-      "warning": 85,
-    },
+      "warning": 85
+    }
   },
+
   "cpu": {
     "interval": 1,
     "format": " {usage}%"
   },
+
   "mpd": {
     "max-length": 25,
     "format": "<span foreground='#bb9af7'></span> {title}",

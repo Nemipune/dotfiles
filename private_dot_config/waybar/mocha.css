@@ -140,6 +140,9 @@ tooltip label {
 #pulseaudio {
   color: @mauve;  /* not active */
 }
+#custom-pipewire {
+  color: @peach;
+}
 #network {
   color: @pink; /* not active */
 }
