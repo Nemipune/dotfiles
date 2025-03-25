@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/mnt/glados/SteamLibrary/steamapps/common/STALKER Shadow of Chernobyl'
+let g:netrw_dirhist_2='/mnt/glados/SteamLibrary/steamapps/common/Dragon Age Ultimate Edition'
+let g:netrw_dirhist_1='/home/nemipune/.dotfiles'
