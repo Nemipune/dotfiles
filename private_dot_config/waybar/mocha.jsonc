@@ -5,7 +5,7 @@
     "custom/scratchpad-indicator",
 //    "temperature",
     "network",
-    "custom/pipewire",
+    "pulseaudio",
     "idle_inhibitor",
     "mpd",
     "custom/cava-internal",
@@ -87,7 +87,7 @@
     "tooltip": true,
     "tooltip-format": "{used}/{total} => {path} {percentage_used}%"
   },
-
+/*
 "custom/pipewire": {
     "format": "{icon} {percentage}%",
     "return-type": "json",
@@ -106,8 +106,8 @@
     },
     "exec": "pw-volume status"
 },
-
-/*  "pulseaudio": {
+*/
+    "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%",
     "format-muted": " ",
@@ -118,14 +118,12 @@
         ""
       ]
     },
-    "states": { 
-      "warning": 100
-    },
     "scroll-step": 1,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pwvucontrol",
     "tooltip": false
   }, 
-*/
+
  
   "battery": {
     "interval": 10,
