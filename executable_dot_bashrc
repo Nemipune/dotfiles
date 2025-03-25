@@ -45,7 +45,7 @@ alias lf='ls --color=auto -lahp | grep -v /' #lists only files, no directories
 alias gpom='git push origin main'
 
 #chezmoi stuff
-alias chezmoidir="cd .local/share/chezmoi/"
+alias chezmoidir="cd ~/.local/share/chezmoi/"
 
 export EDITOR=vim
 
