@@ -74,8 +74,8 @@
     "on-scroll-down": "light -U 7",
     "format": "{icon} {percent}%",
     "format-icons": [
-      "󰃛",
       "󰃜",
+      "󰃛",
       "󰃞",
       "󰃠"
     ]

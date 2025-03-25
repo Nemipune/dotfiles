@@ -51,9 +51,9 @@ window > box {
 }
 */
 #workspaces button {
-  padding-right: .4rem;
-  padding-left: .4rem;
-  padding-top: .1rem;
+  padding-right: .3rem;
+  padding-left: 0rem;
+  padding-top: 0rem;
   padding-bottom: .1rem;
   color: @red;
   /* border: .2px solid transparent; */
