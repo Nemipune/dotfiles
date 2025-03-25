@@ -46,7 +46,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec systemctl poweroff
 bindsym $mod+Shift+e exec bemoji
 
-bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+bindsym $mod+Print exec grimshot --notify save area ~/pictures/screenshots/$(date "+%Y-%m")/$(date "+%Y-%m-%d"_"%H:%M").png
 bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
 bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 bindsym $mod+Shift+x exec --no-startup-id        swaylock --screenshots --clock --indicator  --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0
