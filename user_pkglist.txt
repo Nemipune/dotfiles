@@ -18,4 +18,5 @@ element-desktop
 vim
 lutris
 github-cli
-
+ttf-jetbrains-mono-nerd
+ttf-firacode-nerd
