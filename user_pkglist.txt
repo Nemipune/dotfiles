@@ -17,3 +17,5 @@ waybar
 element-desktop
 vim
 lutris
+github-cli
+

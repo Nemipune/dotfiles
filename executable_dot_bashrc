@@ -55,6 +55,9 @@ alias cmdir='cd ~/.local/share/chezmoi/'
 alias cma='chezmoi apply -v'
 alias cme='chezmoi edit'
 
+#flatpak bkp
+alias fltbkp='flatpak list --columns=application --app > .local/share/chezmoi/flatpak.bkp'
+
 export EDITOR=vim
 
 
