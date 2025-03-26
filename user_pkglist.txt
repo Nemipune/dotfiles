@@ -18,5 +18,17 @@ element-desktop
 vim
 lutris
 github-cli
+cameractrls
+piper
+libreoffice-still
+gimp
+inkscape
+kdenlive
+pinta
+qbittorrent
+lmms
+ardour
+audacity
+kid3
 ttf-jetbrains-mono-nerd
 ttf-firacode-nerd
