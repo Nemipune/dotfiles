@@ -11,4 +11,22 @@
 
 # commands on startup
 
+# environment
 $env.config.buffer_editor = "vim"
+
+# prompt
+
+
+# aliases
+
+# chezmoi
+alias cmdir = cd ~/.local/share/chezmoi
+alias cma = chezmoi apply -v
+alias cmadd = chezmoi add
+alias cme = chezmoi edit
+
+# git
+alias gp = git pull
+alias ga = git add .
+alias gc = git commit -m
+alias gpom = git push origin main

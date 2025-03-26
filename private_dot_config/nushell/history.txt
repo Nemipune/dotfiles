@@ -1,7 +1,0 @@
-$env.config.buffer_editor = /bin/vim
-$env.config.buffer_editor = </bin/vim>
-$env.config.buffer_editor = "vim"
-config nu
-config nu --doc | nu-highlight | less -R
-q
-exit
