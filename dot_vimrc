@@ -1,6 +1,9 @@
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
+" Get catppuccin theme
+set termguicolors
+
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 
@@ -23,5 +26,6 @@ call plug#begin()
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
