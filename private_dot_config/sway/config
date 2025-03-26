@@ -36,7 +36,7 @@ set $0 agrave
 set $term kitty
 set $menu wofi --show drun --style ~/.config/wofi/style.css
 set $browser firefox 
-set $file-manager kitty fm
+set $file-manager kitty fifm
 
 bindsym $mod+x exec keepassxc
 bindsym $mod+d exec $menu
@@ -47,8 +47,7 @@ bindsym $mod+Shift+Return exec systemctl poweroff
 bindsym $mod+Shift+e exec bemoji
 
 bindsym $mod+Print exec grimshot --notify save area ~/pictures/screenshots/$(date "+%Y-%m")/$(date "+%Y-%m-%d"_"%H:%M").png
-bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
-bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
+bindsym $mod+Shift+Print exec --no-startup-id   grimshot --notify  copy area 
 bindsym $mod+Shift+x exec --no-startup-id        swaylock --screenshots --clock --indicator  --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0
 
 bindsym $mod+Shift+r reload
@@ -60,14 +59,10 @@ bindsym $mod+slash workspace back_and_forth
 bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
 
-# Pulse volume bindings, replaced by pw-volume
-# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-# bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym XF86AudioRaiseVolume exec "pw-volume change +5%; pkill -RTMIN+8 waybar"
-bindsym XF86AudioLowerVolume exec "pw-volume change -5%; pkill -RTMIN+8 waybar"
-bindsym XF86AudioMute exec "pw-volume mute toggle; pkill -RTMIN+8 waybar"
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
