@@ -87,12 +87,13 @@ On the EOS live environment, put the `user_pkglist.txt` in the `/home/liveuser` 
 ### FLATPAK
 **Export app list**
 cd to the chezmoi dir and run `flatpak list --columns=application --app > flatpak.bkp`  
-
+  
 *note: I made an alias in bash named* `fltbkp` *that does exactly this*  
-
-
+  
 **Install**  
 cd to the chezmoi dir and run `xargs flatpak install -y < flatpak.bkp`  
   
+*note: I made an alias in bash named* `fltrst` *that does exactly this*  
+
 **Notes**  
 - This won't save the configuration, it's stored in the `~/.var/app`  

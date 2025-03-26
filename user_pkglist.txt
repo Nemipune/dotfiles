@@ -14,8 +14,8 @@ swaybg
 swaylock
 swayidle
 waybar
-element-desktop
 vim
+steam
 lutris
 github-cli
 cameractrls

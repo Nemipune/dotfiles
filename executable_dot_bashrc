@@ -57,6 +57,7 @@ alias cme='chezmoi edit'
 
 #flatpak bkp
 alias fltbkp='flatpak list --columns=application --app > .local/share/chezmoi/flatpak.bkp'
+alias fltrst='xargs flatpak install -y < .local/share/chezmoi/flatpak.bkp'
 
 export EDITOR=vim
 
