@@ -2,7 +2,7 @@
 **global theme:** `catppuccin-mocha`
 
 ## WM
-**greeter:** `sddm`
+**greeter:** `greetd-qtgreet`
 **WM:** `swayfx`
     - `swaybg`
     - `swaylock`
@@ -21,11 +21,10 @@
 
 ## AUDIO
 **server:** `pipewire`
-    - `pwucontrol`
-    - `pw-volume`
+    - `pavuctl`
 
 ## UTILS
-i**dotfiles:** `chezmoi`
+**dotfiles:** `chezmoi`
 **passwords:** `bitwarden`
 **browser:** `firefox`
 
