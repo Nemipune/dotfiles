@@ -1,0 +1,17 @@
+hyfetch
+bottom
+greetd
+greetd-gtkgreet
+kitty
+chezmoi
+nushell
+bitwarden
+firefox
+flatpak
+wofi
+grim
+swaybg
+swaylock
+swayidle
+waybar
+element-desktop
