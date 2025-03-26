@@ -15,3 +15,5 @@ swaylock
 swayidle
 waybar
 element-desktop
+vim
+lutris

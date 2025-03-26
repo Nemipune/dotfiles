@@ -1,5 +1,6 @@
 # MAIN
-**global theme:** `catppuccin-mocha`
+**global theme:** `catppuccin-mocha`  
+**OS:** `EndeavourOS`  
 
 ## WM
 **greeter:** `greetd-qtgreet`  
@@ -7,6 +8,7 @@
 - `swaybg`  
 - `swaylock`  
 - `swayidle`  
+  
 **bar:** `waybar`  
 **screencap:** `grim` `grimshot`  
 **dmenu:** `wofi`  
@@ -31,7 +33,9 @@
 # REC
 ## COMS
 **discord:** `vesktop` *flatpak*  
-**matrix:** `element`  
+**matrix:** `element-desktop`  
 
 ## GAMES
-**steam:** `steam`  
+**launchers:**  
+- `steam`  
+- `lutris`  
