@@ -24,9 +24,10 @@ endif
 
 call plug#begin()
 
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'elkasztano/nushell-syntax-vim'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
 
 call plug#end()

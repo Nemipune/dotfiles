@@ -13,6 +13,7 @@
 
 # environment
 $env.config.buffer_editor = "vim"
+$env.STARSHIP_CACHE = "~/logs/starship"
 
 # prompt
 
