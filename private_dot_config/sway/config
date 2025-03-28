@@ -2,7 +2,7 @@ include catppuccin-mocha
 
 xwayland enable
 
-font pango:FireCode Nerd Font Regular 4px
+font pango:FireCode Nerd Font Regular 12px
 
 default_border pixel 2
 gaps inner  5
