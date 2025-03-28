@@ -1,3 +1,6 @@
+# ACKNOWLEDGEMENT
+This is based on [i4pg](https://github.com/i4pg/dotfiles) repo, thanks for the solid work!  
+
 # PACKAGE LIST
 ## MAIN
 **OS:** `EndeavourOS`  

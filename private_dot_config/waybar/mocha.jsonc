@@ -33,7 +33,7 @@
     "format": "",
     "on-click": "wofi --show drun -I -a",
     "tooltip-format": "sudo pacman -Q linux",
-    "tooltip": false,
+    "tooltip": false
   },
   "custom/cava-internal": {
     "exec": "~/.config/waybar/Cava.sh",
@@ -45,16 +45,16 @@
     "active-only": true,
     "format": "{icon}",
     "format-icons": {
-      "1": "一",
-      "2": "二",
-      "3": "三",
-      "4": "四",
-      "5": "五",
-      "6": "六",
-      "7": "七",
-      "8": "八",
-      "9": "九",
-      "10": "十",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
       "urgent": "",
       "focused": "",
       "default": ""
@@ -118,9 +118,9 @@
         ""
       ]
     },
-    "scroll-step": 1,
+    "scroll-step": 5,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pwvucontrol",
+    "on-click-right": "pavucontrol",
     "tooltip": false
   }, 
 
@@ -149,9 +149,9 @@
   },
 
   "clock": {
-    "on-click": "~/.config/waybar/to_latte.sh &",
+/*    "on-click": "~/.config/waybar/to_latte.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
-    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
+    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",*/
     "interval": 1,
     "format": "{:%H:%M  %A %b %d}",
     "tooltip": true,
@@ -174,7 +174,7 @@
 
   "mpd": {
     "max-length": 25,
-    "format": "<span foreground='#bb9af7'></span> {title}",
+    "format": "<span foreground='#bb9af7'></span> {title} - {artist}",
     "format-paused": " {title}",
     "format-stopped": "<span foreground='#bb9af7'></span>",
     "format-disconnected": "",
@@ -183,14 +183,14 @@
     "on-click-middle": "kitty ncmpcpp",
     "on-scroll-up": "mpc --quiet prev",
     "on-scroll-down": "mpc --quiet next",
-    "smooth-scrolling-threshold": 5,
+    "smooth-scrolling-threshold": 0,
     "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
   },
   "network": {
     "interval": 1,
-    "format-wifi": " {essid}",
+    "format-wifi": "  {essid}",
     "format-ethernet": "  {ifname} ({ipaddr})",
-    "format-linked": " {essid} (No IP)",
+    "format-linked": "  {essid} (No IP)",
     "format-disconnected": " Disconnected",
     "tooltip": false
   },
@@ -202,7 +202,7 @@
   },
   "custom/powermenu": {
     "format": "",
-    "on-click": "~/.config/wofi/powermenu.sh",
+    "on-click": "~/bin/wofi-power-menu",
     "tooltip": false
   },
   "tray": {
