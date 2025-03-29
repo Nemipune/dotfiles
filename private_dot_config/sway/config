@@ -96,6 +96,10 @@ exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 exec sworkstyle &> /tmp/sworkstyle.log
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# ugly ass way to get easyeffects running
+for_window [app_id="com.github.wwmm.easyeffects"]	move to scratchpad
+exec flatpak run com.github.wwmm.easyeffects
+
 # set $gnome-schema org.gnome.desktop.interface
 seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors
 # exec_always {

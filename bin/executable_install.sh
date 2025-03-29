@@ -1,7 +1,9 @@
 #!/bin/bash
 
 listbase="bemoji bitwarden bottom chezmoi fifm firefox flatpak grim grimshot-bin-sway github-cli hyfetch kdeconnect kid3 kitty light mpc mpd ncmpcpp neofetch nerd-fonts noto-fonts noto-fonts-emoji nushell pavucontrol sddm sddm slurp starship swaybg swayfx swayidle swaylock topgrade vim waybar wofi xorg-xwayland yt-dlp"
-listfluff="ardour audacity cameractrls gimp inkscape kdenlive lutris piper steam"
+
+listfluff="ardour audacity cameractrls gimp guitarix inkscape kdenlive lmms lutris piper steam"
+
 config="$HOME/.config/"
 
 read -p "Enter username: " user
@@ -20,6 +22,23 @@ select yn in "Yes" "No"; do
     esac
 done
 
+echo "Do you wish to install plasma alongside sway?"
+select yn in "Yes" "No"; do
+    case $yn in
+	Yes ) yay -S plasma; break;;
+	No ) exit;;
+    esac
+done
+
+# flatpak
+# note: the flatpak build for easyeffects is busted, see the sway config file for the workaround
+
+flatpak install dev.vencord.Vesktop				# Vesktop
+flatpak install com.github.wwmm.easyeffects			# Easyeffects
+flatpak install im.riot.Riot					# Element
+
+flatpak override dev.vencord.Vesktop --filesystem=/home/$user	# Allow Vesktop to access files in /home/$user
+
 # chezmoi
 chezmoi init https://github.com/nemipune/dotfiles.git
 chezmoi diff
@@ -36,3 +55,7 @@ usermod -aG audio,seat,users,video $user
 
 # mpd setup
 systemctl --user enable mpd.service
+
+# todo
+# - setup the Icecast config when I do that
+# - setup/config nushell and add it there
