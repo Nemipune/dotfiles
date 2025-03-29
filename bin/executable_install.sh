@@ -65,3 +65,4 @@ topgrade
 # todo
 # - setup the Icecast config when I do that
 # - setup/config nushell and add it there
+# - fix wlroots-nvidia blablabla
