@@ -1,25 +1,30 @@
 include catppuccin-mocha
 
 # windows style
+font 			pango:FiraCode Nerd Font Mono Bold 12px
+default_border		pixel 2
+gaps inner  		5
+gaps outer		10
+smart_borders		off
 
-font FiraCode Nerd Font Regular 12px
-default_border pixel 2
-gaps inner  5
-gaps outer  10
-smart_borders off
-corner_radius 10
-default_dim_inactive 0.2
-blur enable
-blur_radius 1
-blur_brightness 1.5
+# swayfx stuff
+corner_radius		10
+default_dim_inactive	0.2
+blur			enable
+blur_radius		1
+blur_brightness		1.5
 
+#background
+exec_always --no-startup-id swaybg -i ~/.config/sway/darkest_hour.jpg
 
-# window colors
+# windows colors
+# target                title     bg    text   indicator  border                                                    
+client.focused          $pink     $base $text  $rosewater $lavender                                                 
+client.focused_inactive $mauve    $base $text  $rosewater $mauve                                                    
+client.unfocused        $mauve    $base $text  $rosewater $mauve                                                    
+client.urgent           $peach    $base $peach $overlay0  $red                                                      
+client.placeholder      $overlay0 $base $text  $overlay0  $overlay0                                                 
+client.background       $base
 
-# target                 title     bg    text   indicator  border                                                    
-client.focused           $pink     $base $text  $rosewater $lavender                                                 
-client.focused_inactive  $mauve    $base $text  $rosewater $mauve                                                    
-client.unfocused         $mauve    $base $text  $rosewater $mauve                                                    
-client.urgent            $peach    $base $peach $overlay0  $red                                                      
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0                                                 
-client.background        $base
+# cursor theme
+seat seat0 xcursor_theme Catppuccin-Mocha-Dark-Cursors

@@ -3,7 +3,7 @@ set -e
 
 # This assumes that you have EndeavourOS installed with yay
 
-listbase="bemoji bitwarden bottom chezmoi fifm firefox flatpak grim grimshot-bin-sway github-cli hyfetch kdeconnect kid3 kitty light mpc mpd ncmpcpp neofetch nerd-fonts noto-fonts noto-fonts-emoji nushell pavucontrol sddm sddm slurp starship swaybg swayfx swayidle swaylock topgrade vim waybar wofi xorg-xwayland yt-dlp"
+listbase="bemoji bitwarden bottom catppuccin-cursors-mocha chezmoi fifm firefox flatpak grim grimshot-bin-sway github-cli hyfetch kdeconnect kid3 kitty light mpc mpd ncmpcpp neofetch nerd-fonts noto-fonts noto-fonts-emoji nushell pavucontrol sddm sddm slurp starship swaybg swayfx swayidle swaylock topgrade vim waybar wofi xorg-xwayland yt-dlp"
 
 listfluff="ardour audacity cameractrls gimp guitarix inkscape kdenlive lmms lutris piper steam"
 

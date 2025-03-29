@@ -1,17 +1,19 @@
 include catppuccin-mocha
+include sway-visual
 
 xwayland enable
 
-font pango:FireCode Nerd Font Regular 12px
+font pango:FiraCode Nerd Font Mono Bold 12px
 
 default_border pixel 2
+smart_borders off
 gaps inner  5
 gaps outer  10
-smart_borders off
 corner_radius 10
 default_dim_inactive 0.2
 blur enable
 blur_radius 1
+
 blur_brightness 1.5
 
 # assign 		[app_id="librewolf"] 		    1
@@ -44,7 +46,7 @@ bindsym $mod+w exec $browser
 bindsym $mod+r exec $file-manager
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec systemctl poweroff
-bindsym $mod+Shift+e exec bemoji
+# bindsym $mod+Shift+e exec bemoji
 bindsym $mod+m exec kitty ncmpcpp
 
 bindsym Shift+Print exec grimshot --notify save area ~/pictures/screenshots/$(date "+%Y-%m")/$(date "+%Y-%m-%d"_"%H:%M").png
@@ -63,22 +65,20 @@ bindsym $mod+comma workspace prev
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 output * adaptive_sync on
 
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
-for_window [app_id="mpv"]                        floating enable 
-for_window [app_id="mpv"]                        resize set height 540
-for_window [app_id="mpv"]                        resize set width 960
 for_window [app_id="keepassxc"]                  floating enable
 
 focus_follows_mouse yes
@@ -87,7 +87,6 @@ exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 exec mako
 exec swaycons
 exec fcitx5
-exec_always  --no-startup-id  swaybg -i ~/.config/sway/darkest_hour.jpg
 exec_always  --no-startup-id  nm-applet --indicator &
 exec_always  --no-startup-id  syncthing &
 exec_always  --no-startup-id  autotiling-rs &
@@ -151,6 +150,7 @@ exec swayidle -w \
 # Despite the name, also works for non-floating windows.
 # Change normal to inverse to use left mouse button for resizing and right
 # mouse button for dragging.
+
 floating_modifier $mod normal
 
 #----------------#
@@ -213,16 +213,14 @@ floating_modifier $mod normal
     bindsym $mod+Ctrl+$8 move container to workspace 8,  workspace 8
     bindsym $mod+Ctrl+$9 move container to workspace 9,  workspace 9
     bindsym $mod+Ctrl+$0 move container to workspace 10, workspace 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
 #---------------#
 # Layout stuff: #
 #---------------#
     # You can "split" the current object of your focus with
     # $mod+semicolon or $mod+apostrophe, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+Shift+v splitv
-    bindsym $mod+Shift+b splith
+    bindsym $mod+Shift+z splitv
+    bindsym $mod+Shift+e splith
 
     # Switch the current container between different layout styles
     # bindsym $mod+s layout stacking
