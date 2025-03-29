@@ -1,4 +1,7 @@
-#!/bin/bash
+#!usr/bin/env bash
+set -e
+
+# This assumes that you have EndeavourOS installed with yay
 
 listbase="bemoji bitwarden bottom chezmoi fifm firefox flatpak grim grimshot-bin-sway github-cli hyfetch kdeconnect kid3 kitty light mpc mpd ncmpcpp neofetch nerd-fonts noto-fonts noto-fonts-emoji nushell pavucontrol sddm sddm slurp starship swaybg swayfx swayidle swaylock topgrade vim waybar wofi xorg-xwayland yt-dlp"
 
@@ -37,7 +40,7 @@ flatpak install dev.vencord.Vesktop				# Vesktop
 flatpak install com.github.wwmm.easyeffects			# Easyeffects
 flatpak install im.riot.Riot					# Element
 
-flatpak override dev.vencord.Vesktop --filesystem=/home/$user	# Allow Vesktop to access files in /home/$user
+flatpak override dev.vencord.Vesktop --filesystem="/home/$user"	# Allow Vesktop to access files in /home/$user
 
 # chezmoi
 chezmoi init https://github.com/nemipune/dotfiles.git
@@ -46,15 +49,18 @@ chezmoi apply
 
 # sddm setup
 systemctl enable sddm.service
-cp -rv $config/system/sddm/sddm.conf.d /etc
-cp -rv $config/system/sddm/themes /usr/share/sddm
-cp -rv $config/system/wayland-sessions /usr/share # this one passes the "--unsupported-gpu" flag to the sway command
+cp -rv "$config/system/sddm/sddm.conf.d" /etc
+cp -rv "$config/system/sddm/themes" /usr/share/sddm
+cp -rv "$config/system/wayland-sessions" /usr/share # this one passes the "--unsupported-gpu" flag to the sway command
 
 # user config
 usermod -aG audio,seat,users,video $user
 
 # mpd setup
 systemctl --user enable mpd.service
+
+# wrap up update + vim settings
+topgrade
 
 # todo
 # - setup the Icecast config when I do that
