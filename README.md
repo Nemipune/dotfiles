@@ -1,5 +1,5 @@
 # ACKNOWLEDGEMENT
-This is based on [i4pg](https://github.com/i4pg/dotfiles) repo, thanks for the solid work!  
+This is based on [i4pg's](https://github.com/i4pg/dotfiles) repo, thanks for the solid work!  
 
 # PACKAGE LIST
 ## MAIN
@@ -7,7 +7,7 @@ This is based on [i4pg](https://github.com/i4pg/dotfiles) repo, thanks for the s
 **global theme:** `catppuccin-mocha`  
 
 ### WM
-**greeter:** `greetd-gtkgreet`  
+**greeter:** `sddm`  
 **WM:** `swayfx`  
 - `swaybg`  
 - `swaylock`  
@@ -29,6 +29,7 @@ This is based on [i4pg](https://github.com/i4pg/dotfiles) repo, thanks for the s
 **server:** `pipewire`  
     - `pavuctl`  
 **effects:** `easyeffects` *flatpak*  
+**music:** `mpd` (client: `ncmpcpp`)  
 
 ### UTILS
 **update:** `topgrade`  

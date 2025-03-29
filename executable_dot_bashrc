@@ -35,27 +35,29 @@ ShowInstallerIsoInfo() {
     fi
 }
 
+# yay stuff
+alias rmorph='yay -Qdtq | yay -Rns -'
 
-alias pk="peaclock"
+# ls
 alias ls='ls --color=auto'
 alias ll='ls -lahA --color=auto'   # show long listing of all except ".." and "."
 alias l='ls -lahA --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias ldir='ls -ld */' #Lists only directories, no files
 alias lf='ls --color=auto -lahp | grep -v /' #lists only files, no directories 
 
-#git stuff
+# git stuff
 alias gp='git pull'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gpom='git push origin main'
 
 
-#chezmoi stuff
+# chezmoi stuff
 alias cmdir='cd ~/.local/share/chezmoi/'
 alias cma='chezmoi apply -v'
 alias cme='chezmoi edit'
 
-#flatpak bkp
+# flatpak bkp
 alias fltrst='xargs flatpak install -y < ~/.local/share/chezmoi/flatpak.bkp'
 
 export EDITOR=vim
